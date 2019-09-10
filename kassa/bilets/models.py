@@ -29,7 +29,6 @@ class Tickets(models.Model):
     discount_ticket = models.PositiveIntegerField('Количество льготных билетов')
     free_ticket=models.PositiveIntegerField('Количество бесплатных билетов')
     full_ticket_coast=models.PositiveIntegerField('Полная стоимость всех билетов')
-
     cashier=models.CharField('ФИ Кассира',max_length=100)
     ticket_pdf=models.FileField(upload_to='tickets_pdf/')
 
@@ -38,7 +37,7 @@ class Tickets(models.Model):
         verbose_name_plural = "Билеты"
 
     def __str__(self):
-        return "Билет: количество("+ str(self.normal_ticket+self.free_ticket)+")"
+        return "Билет: количество("+ str(self.normal_ticket+self.free_ticket+self.discount_ticket)+")"
 
     def save(self, *args, **kwargs):
         moss=Excursion.objects.get(name=self.excurs)
