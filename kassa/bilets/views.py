@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import *
 from .forms import *
 import os
+import io
+from reportlab.pdfgen import canvas
 from django.http import FileResponse, HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
@@ -12,7 +14,7 @@ import datetime
 
 
 
-
+## Действие при удалении билета !!!!!!!!!!!!!!!!
 @receiver(pre_delete, sender=Tickets)
 def my_function_post_save(sender,instance,**kwargs):
     print("Deleter !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
@@ -84,6 +86,9 @@ def control_panel(request):
         pp = User.objects.all()
         xx = Tickets.objects.all()
 
+
+
+
         form = Tick()
 
     return render(request, "control_panel.html", {"form": form,"zz": zz,'pp': pp,'xx': xx})
@@ -112,6 +117,16 @@ def delet(request):
         pp = Tickets.objects.filter(pk=5).delete()
         print("asdd")
     return render(request, "control_panel.html", {})
+
+
+def ticket_gen(request):
+    buffer = io.BytesIO()
+    p = canvas.Canvas(buffer)
+    p.drawString(100, 100, "Привет медвед.")
+    p.showPage()
+    p.save()
+    buffer.seek(0)
+    return FileResponse(buffer, as_attachment=True, filename='hello.pdf')
 
 
 

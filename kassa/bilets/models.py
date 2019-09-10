@@ -9,9 +9,9 @@ from django.dispatch import receiver
 class Excursion(models.Model):
     id = models.AutoField(primary_key=True)
     name=models.CharField('Название экскурсии',max_length=100)
-    ticket_qty=models.IntegerField('Количество билетов')
-    ticket_price=models.IntegerField('Стоимость обычного билета')
-    discount_ticket_price=models.IntegerField('Стоимость льготного билета')
+    ticket_qty=models.PositiveIntegerField('Количество билетов')
+    ticket_price=models.PositiveIntegerField('Стоимость обычного билета')
+    discount_ticket_price=models.PositiveIntegerField('Стоимость льготного билета')
     time=models.TimeField('Время экскурсии')
 
     class Meta:
@@ -28,7 +28,10 @@ class Tickets(models.Model):
     normal_ticket=models.PositiveIntegerField('Количество обычных билетов')
     discount_ticket = models.PositiveIntegerField('Количество льготных билетов')
     free_ticket=models.PositiveIntegerField('Количество бесплатных билетов')
+    full_ticket_coast=models.PositiveIntegerField('Полная стоимость всех билетов')
+
     cashier=models.CharField('ФИ Кассира',max_length=100)
+    ticket_pdf=models.FileField(upload_to='tickets_pdf/')
 
     class Meta:
         verbose_name = "Билет"
@@ -43,6 +46,12 @@ class Tickets(models.Model):
         moss.ticket_qty -= self.discount_ticket
         moss.ticket_qty -= self.free_ticket
         moss.save()
+        # Вычисляем полную стоимость всего билета !
+        moss = Excursion.objects.get(name=self.excurs)
+        a=moss.ticket_price*self.normal_ticket
+        b=moss.discount_ticket_price*self.discount_ticket
+        self.full_ticket_coast=a+b
+
         super(Tickets, self).save(*args, **kwargs)
 
 
