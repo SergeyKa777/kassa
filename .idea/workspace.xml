@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96b7eb1a-d8ee-4fca-956e-5d04aaf9d68b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARIALN.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARIALNB.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARIALNBI.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ARIALNI.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arial.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arialbd.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arialbi.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ariali.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ariblk.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kassa/bilets/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kassa/bilets/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kassa/kassa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kassa/kassa/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kassa/templates/control_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/kassa/templates/control_panel.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="control_panel.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="control_panel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kassa/templates/control_panel.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -99,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kassa/kassa/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+            <state relative-caret-position="27">
+              <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -146,8 +134,8 @@
         <option value="$PROJECT_DIR$/kassa/bilets/urls.py" />
         <option value="$PROJECT_DIR$/kassa/bilets/models.py" />
         <option value="$PROJECT_DIR$/kassa/bilets/views.py" />
-        <option value="$PROJECT_DIR$/kassa/kassa/settings.py" />
         <option value="$PROJECT_DIR$/kassa/templates/control_panel.html" />
+        <option value="$PROJECT_DIR$/kassa/kassa/settings.py" />
       </list>
     </option>
   </component>
@@ -485,17 +473,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kassa/kassa/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kassa/templates/control_panel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kassa/kassa/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
         </state>
       </provider>
     </entry>
