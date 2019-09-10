@@ -3,7 +3,7 @@ from .models import *
 
 import os
 from django.http import FileResponse, HttpResponse
-from django_xhtml2pdf.utils import pdf_decorator
+
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 from django.conf import settings

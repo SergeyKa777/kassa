@@ -56,7 +56,7 @@ ROOT_URLCONF = 'kassa.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['x:/kassa/kassa/templates'],
+        'DIRS': ['C:/kassa/kassa/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,5 +126,5 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = 'X:/kassa/media/'
+MEDIA_ROOT = 'C:/kassa/kassa/media/'
 
