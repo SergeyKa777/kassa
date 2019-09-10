@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    @font-face {
+        font-family: "Times New Roman";
+        src: url('X:/kassa/kassa/static/times.ttf')
+    }
+
+    body {
+        font-family: "Times New Roman";
+    }
+</style>
+{{ xx }}
+
+
+{% for hh in pp %}
+    <hr>
+    <h3>Login: {{ hh.username }} <br> Имя: {{ hh.first_name }} <br> Фамилия: {{ hh.last_name }}</h3>
+{% endfor %}
+
+{% for pagi in zz %}
+    <hr>
+    <h3>Id: {{ pagi.id }}, Экскурсия: {{ pagi.name }}, Мест: {{ pagi.ticket_qty }}, Время
+        экскурсии: {{ pagi.time }} dfdsf {{ pagi.pub_date }}</h3>
+
+
+{% endfor %}
+<h1>TEST</h1>
+
+</body>
+</html>
